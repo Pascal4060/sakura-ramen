@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakura Ramen</title>
+    <link rel="icon" type="image/png" href="./assets/sakura_logo.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            background-image: url("./assets/hero_bg.jpg");
+            background-size: cover;
+            background-position: center bottom;
+            color: white;
+            position: relative;
+        }
+
+
+        .menueleiste {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-left: 230px;
+        }
+
+        .logo {
+            height: 64px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 24px;
+            font-family: "Raleway", sans-serif;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 24px;
+            font-family: "Raleway", sans-serif;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background-color: #9F0908;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .hero-text {
+            text-align: center;
+            margin-bottom: 1000px;
+        }
+
+
+
+        .hero-text h1 {
+            font-family: "Raleway", sans-serif;
+            font-size: 96px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+
+        .hero-text h2 {
+            font-family: "Raleway", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            margin-top: -5px;
+        }
+
+        .order-container {
+            background-color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .order-title h2 {
+            font-family: "Raleway", sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #9F0908;
+        }
+
+        .order-steps {
+            display: flex;
+            justify-content: center;
+            gap: 250px;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .step img {
+            width: 128px;
+            height: auto;
+        }
+
+        .step p {
+            font-family: "Economica", sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-top: 20px;
+        }
+
+        .menu-container {
+            background-image: url("./assets/section_our_menu_bg.jpg");
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .menu-title h2 {
+            font-family: "Raleway", sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #9F0908;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 80px;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .menu-item.reverse {
+            justify-content: flex-end;
+        }
+
+        .ramen-image {
+            width: 352px;
+            height: 352px;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .menu-text {
+            text-align: left;
+            height: 100%;
+            padding-bottom: 60px;
+        }
+
+        .ingredients {
+            display: flex;
+            flex-direction: column;
+            font-family: "Raleway", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: black;
+            gap: 8px;
+        }
+
+        .ingredient-row {
+            display: grid;
+            grid-template-columns: 4fr 1fr;
+            font-family: "Raleway", sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #675E54;
+            width: 100%;
+            max-width: 500px;
+            padding: 5px 0;
+        }
+
+
+        h3 {
+            font-family: "Economica", sans-serif;
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .menu-wrapper {
+            padding: 120px;
+            max-width: 1400px;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .find-us-section {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .find-us-content {
+            margin-bottom: 64px;
+        }
+
+        .find-us-content h2 {
+            font-family: "Raleway", sans-serif;
+            font-size: 80px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #9F0908;
+        }
+
+        .find-us-content p {
+    font-family: "Raleway", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: black;
+    display: inline-flex;           
+    align-items: center;           
+    gap: 8px;                      
+    justify-content: center;       
+    text-align: center;          
+    margin-top: auto;
+}
+
+
+        .find-us-content p img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .google-maps {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        .footer {
+            background-color: #0A141E;
+            height: 114px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+            gap: 730px;
+        }
+
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons img {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .footer-logo img {
+            height: 44px;
+        }
+
+        .phone-box {
+            display: flex;
+            align-items: center;
+            background-color: #9F0908;
+            color: white;
+            font-family: "Raleway", sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 10px 15px;
+            border: 2px solid white;
+            border-radius: 8px;
+            gap: 10px;
+        }
+
+        .phone-box img {
+            width: 24px;
+            height: 24px;
+        }
+
+        @media (max-width: 800px) {
+    .menueleiste {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .logo-container {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero-text h1 {
+        font-size: 60px;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .order-steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .order-title h2,
+    .menu-title h2,
+    .find-us-content h2 {
+        font-size: 40px;
+    }
+
+    .step p {
+        font-size: 32px;
+    }
+
+    .menu-wrapper {
+        padding: 40px 20px;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .menu-item,
+.menu-item.reverse {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    gap: 20px;
+}
+
+.ramen-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.menu-text {
+    padding: 0;
+}
+
+
+    .menu-text {
+        padding-bottom: 20px;
+    }
+
+    .ingredients {
+        font-size: 24px;
+    }
+
+    .ingredient-row {
+        font-size: 20px;
+        grid-template-columns: 2fr 1fr;
+        margin-right: 10px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .phone-box {
+        font-size: 16px;
+    }
+
+    .find-us-content p {
+        font-size: 18px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .google-maps {
+        height: 250px;
+    }
+
+    .nav-links a:not(.phone-box) {
+    display: none;
+}
+}
+
+
+
+
+        
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="hero-container">
+
+        <div class="menueleiste">
+            <div class="logo-container">
+                <img class="logo" src="./assets/sakura_logo.png">
+            </div>
+
+            <nav class="nav-links">
+                <a href="#menu">MENU</a>
+                <a href="#locations">LOCATIONS</a>
+                <a href="#">ABOUT</a>
+                <a href="tel:017654564534" class="phone-box">
+                    <img src="./assets/phone.png">
+                    <span>0176 54564534</span>
+                </a>
+
+        </div>
+
+        </nav>
+
+        </div>
+
+        <div class="hero-text">
+            <h1>SAKURA RAMEN</h1>
+            <h2>THE BEST RAMEN IN TOWN</h2>
+        </div>
+
+    </header>
+
+    <section class="order-container">
+        <div class="order-title">
+            <h2>HOW TO ORDER</h2>
+        </div>
+
+        <div class="order-steps">
+            <div class="step">
+                <img src="./assets/noodle.png">
+                <p>Pick your <br> Noodles</p>
+            </div>
+            <div class="step">
+                <img src="./assets/broth.png">
+                <p>Pick Your <br> Broth</p>
+            </div>
+            <div class="step">
+                <img src="./assets/egg.png">
+                <p>Add Your <br> Toppings</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-container">
+        <div class="menu-wrapper">
+
+            <div class="menu-title">
+                <h2>OUR MENU</h2>
+            </div>
+
+            <div class="menu-item">
+                <img class="ramen-image" src="./assets/R1.png">
+                <div class="menu-text">
+                    <h3>Tonkotsu Ramen</h3>
+                    <div class="ingredients">
+                        <div class="ingredient-row">
+                            <span>CHICKEN</span> <span>11,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>BEEF</span> <span>12,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>SHRIMP</span> <span>13,95€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-item reverse">
+                <div class="menu-text">
+                    <h3>Spicy Miso Ramen</h3>
+                    <div class="ingredients">
+                        <div class="ingredient-row">
+                            <span>CHICKEN</span> <span>11,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>BEEF</span> <span>12,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>SHRIMP</span> <span>13,95€</span>
+                        </div>
+                    </div>
+                </div>
+                <img class="ramen-image" src="./assets/R2.png">
+            </div>
+
+            <div class="menu-item">
+                <img class="ramen-image" src="./assets/R3.png">
+                <div class="menu-text">
+                    <h3>Shio Ramen</h3>
+                    <div class="ingredients">
+                        <div class="ingredient-row">
+                            <span>CHICKEN</span> <span>11,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>BEEF</span> <span>12,95€</span>
+                        </div>
+                        <div class="ingredient-row">
+                            <span>SHRIMP</span> <span>13,95€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    </header>
+
+    <section id="locations" class="find-us-section">
+        <div class="find-us-content">
+            <h2>FIND US AT</h2>
+            <p>
+                <img src="./assets/map_marker.png">
+                Kapuzinerstraße 31, München, 80337
+            </p>
+        </div>
+
+        <iframe class="google-maps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2658.8387922404346!2d11.559248376748923!3d48.12427805379964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479ddfbb68f3a4a5%3A0x6b1b49d982f660a5!2sKapuzinerstra%C3%9Fe%2031%2C%2080337%20M%C3%BCnchen%2C%20Deutschland!5e0!3m2!1sde!2sde!4v1707768432921!5m2!1sde!2sde"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./assets/sakura_ramen_logo_and_text.png">
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="./assets/instagrram_logo.png" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="./assets/facebook_logo.png" alt="Facebook">
+                </a>
+                <a href="https://www.tripadvisor.com" target="_blank">
+                    <img src="./assets/tripadvisor_logo.png" alt="TripAdvisor">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
