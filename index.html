@@ -324,6 +324,14 @@
         }
 
         @media (max-width: 768px) {
+
+            html,
+            body {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+
+
             .menueleiste {
                 flex-direction: right;
                 margin-left: 0;
@@ -336,9 +344,31 @@
             }
 
             .nav-links {
-                flex-direction: column;
-                gap: 15px;
-                margin-top: 10px;
+                display: flex;
+                justify-content: flex-end;
+                width: 100%;
+                padding: 10px 20px;
+            }
+
+            .nav-links a:not(.phone-box) {
+                display: none;
+            }
+
+            .phone-box {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                font-size: 16px;
+                padding: 8px 12px;
+                gap: 8px;
+                background-color: #9F0908;
+                border: 2px solid white;
+                border-radius: 8px;
+            }
+
+            .phone-box img {
+                width: 20px;
+                height: 20px;
             }
 
             .hero-text {
@@ -441,11 +471,13 @@
                 padding: 20px;
             }
 
-            .find-us-content h2 {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-                padding: 20px;
+            .find-us-section {
+                text-align: center;
+                margin-bottom: 0;
+            }
+
+            .find-us-content {
+                margin-bottom: 48px;
             }
 
             .find-us-content p {
@@ -455,7 +487,14 @@
             .google-maps {
                 width: 100%;
                 height: 700px;
-                border: none;
+            }
+
+            .footer-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 30px;
+                gap: 290px;
             }
 
             .social-icons {
@@ -471,7 +510,24 @@
                 margin-left: 0;
             }
 
+            .phone-box {
+                display: flex;
+                align-items: center;
+                background-color: #9F0908;
+                color: white;
+                font-family: "Raleway", sans-serif;
+                font-size: 18px;
+                font-weight: 700;
+                padding: 10px 15px;
+                border: 2px solid white;
+                border-radius: 8px;
+                gap: 10px;
+            }
 
+            .phone-box img {
+                width: 24px;
+                height: 24px;
+            }
 
         }
     </style>
