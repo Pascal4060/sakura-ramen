@@ -294,11 +294,14 @@
             height: 32px;
         }
 
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .logo-mobile {
+            display: none;
         }
+
+        .logo-default {
+            display: block;
+        }
+
 
         .footer-logo img {
             height: 44px;
@@ -529,6 +532,147 @@
                 height: 24px;
             }
 
+            @media (max-width: 425px) {
+
+                html,
+                body {
+                    overflow-x: hidden;
+                    max-width: 100vw;
+                }
+
+                .logo {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .phone-box {
+                    font-size: 10px;
+                    height: 15px;
+                    padding: 0;
+                    gap: 0;
+                }
+
+                .phone-box img {
+                    width: 20px;
+                    height: 20px;
+                }
+
+                .nav-links {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+                .hero-text h1 {
+                    font-size: 44px;
+                }
+
+                .hero-text h2 {
+                    font-size: 16px;
+                }
+
+                .order-title h2 {
+                    font-size: 40px;
+                    margin-bottom: 32px;
+                }
+
+                .step img {
+                    width: 112px;
+                }
+
+                .step p {
+                    font-size: 32px;
+                    margin-top: 8px;
+                }
+
+                .order-steps {
+                    flex-direction: column;
+                    gap: 32px;
+                }
+
+                .menu-title h2 {
+                    font-size: 40px;
+                    margin-bottom: 40px;
+                }
+
+                .menu-item,
+                .menu-item.reverse {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 16px;
+                    padding: 32px 0;
+                }
+
+                .menu-item.reverse {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    text-align: center;
+                }
+
+
+                .ramen-image {
+                    width: 352px;
+                    height: 352px;
+                }
+
+                .menu-text h3 {
+                    font-size: 32px;
+                }
+
+                .ingredients {
+                    font-size: 24px;
+                }
+
+                .ingredient-row {
+                    font-size: 24px;
+                }
+
+                .find-us-content {
+                    margin-bottom: 40px;
+                }
+
+                .find-us-content h2 {
+                    font-size: 40px;
+                    margin-bottom: 8px;
+                }
+
+                .find-us-content p {
+                    font-size: 16px;
+                }
+
+                .google-maps {
+                    height: 600px;
+                    width: 100%;
+                }
+
+                .footer {
+                    height: 86px;
+                }
+
+                .logo-default {
+                    display: none;
+                }
+
+                .logo-mobile {
+                    display: block;
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .social-icons img {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .footer-content {
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 200px;
+                    padding: 20px;
+                }
+            }
+
+
         }
     </style>
 
@@ -679,8 +823,10 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="./assets/sakura_ramen_logo_and_text.png">
+                <img class="logo-default" src="./assets/sakura_ramen_logo_and_text.png" alt="Sakura Logo">
+                <img class="logo-mobile" src="./assets/sakura_logo.png" alt="Sakura Mobile Logo">
             </div>
+
 
             <div class="social-icons">
                 <a href="https://www.instagram.com" target="_blank">
@@ -693,6 +839,7 @@
                     <img src="./assets/tripadvisor_logo.png" alt="TripAdvisor">
                 </a>
             </div>
+
 
         </div>
     </footer>
