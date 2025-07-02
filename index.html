@@ -242,17 +242,17 @@
         }
 
         .find-us-content p {
-    font-family: "Raleway", sans-serif;
-    font-size: 24px;
-    font-weight: 400;
-    color: black;
-    display: inline-flex;           
-    align-items: center;           
-    gap: 8px;                      
-    justify-content: center;       
-    text-align: center;          
-    margin-top: auto;
-}
+            font-family: "Raleway", sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+            color: black;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            text-align: center;
+            margin-top: auto;
+        }
 
 
         .find-us-content p img {
@@ -323,120 +323,157 @@
             height: 24px;
         }
 
-        @media (max-width: 800px) {
-    .menueleiste {
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0;
-        padding: 10px;
-    }
+        @media (max-width: 768px) {
+            .menueleiste {
+                flex-direction: right;
+                margin-left: 0;
+                padding: 10px;
+            }
 
-    .logo-container {
-        margin-left: 0;
-        justify-content: center;
-    }
+            .logo-container {
+                margin-left: 0;
+                justify-content: left;
+            }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 10px;
-    }
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                margin-top: 10px;
+            }
 
-    .hero-text h1 {
-        font-size: 60px;
-    }
+            .hero-text {
+                text-align: center;
+                margin-bottom: 700px;
+            }
 
-    .hero-text h2 {
-        font-size: 30px;
-    }
+            .hero-text h1 {
+                font-size: 72px;
+            }
 
-    .order-steps {
-        flex-direction: column;
-        gap: 40px;
-    }
+            .hero-text h2 {
+                font-size: 20px;
+            }
 
-    .order-title h2,
-    .menu-title h2,
-    .find-us-content h2 {
-        font-size: 40px;
-    }
+            .order-container {
+                background-color: white;
+                text-align: center;
+                padding: 96px 20px;
+            }
 
-    .step p {
-        font-size: 32px;
-    }
+            .order-title h2 {
+                font-family: "Raleway", sans-serif;
+                font-size: 64px;
+                font-weight: 700;
+                margin-bottom: 50px;
+                color: #9F0908;
+            }
 
-    .menu-wrapper {
-        padding: 40px 20px;
-    }
+            .order-steps {
+                display: flex;
+                justify-content: center;
+                gap: 170px;
+            }
 
-    .menu-item {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
+            .step {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
 
-    .menu-item,
-.menu-item.reverse {
-    flex-direction: row;
-    text-align: left;
-    align-items: center;
-    gap: 20px;
-}
+            .step img {
+                width: 112px;
+                height: auto;
+            }
 
-.ramen-image {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-}
+            .step p {
+                font-family: "Economica", sans-serif;
+                font-size: 32px;
+                font-weight: 700;
+                margin-top: 20px;
+            }
 
-.menu-text {
-    padding: 0;
-}
+            .menu-title h2 {
+                font-size: 64px;
+            }
 
+            .menu-item,
+            .menu-item.reverse {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 24px;
+                padding: 20px 0;
+                margin: 0;
+                max-width: 100%;
+                border-radius: 0;
+            }
 
-    .menu-text {
-        padding-bottom: 20px;
-    }
+            .ramen-image {
+                width: 352px;
+                height: 352px;
+                border-radius: 10px;
+                display: block;
+            }
 
-    .ingredients {
-        font-size: 24px;
-    }
+            .menu-text {
+                flex: 1;
+                text-align: left;
+                padding-bottom: 0;
+            }
 
-    .ingredient-row {
-        font-size: 20px;
-        grid-template-columns: 2fr 1fr;
-        margin-right: 10px;
-    }
+            .ingredients {
+                font-size: 32px;
+            }
 
-    .footer-content {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .phone-box {
-        font-size: 16px;
-    }
-
-    .find-us-content p {
-        font-size: 18px;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .google-maps {
-        height: 250px;
-    }
-
-    .nav-links a:not(.phone-box) {
-    display: none;
-}
-}
+            .ingredient-row {
+                font-size: 24px;
+            }
 
 
+            h3 {
+                font-family: "Economica", sans-serif;
+                font-size: 56px;
+                font-weight: 700;
+                margin-bottom: 16px;
+            }
+
+            .menu-wrapper {
+                padding: 20px;
+            }
+
+            .find-us-content h2 {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .find-us-content p {
+                font-size: 20px;
+            }
+
+            .google-maps {
+                width: 100%;
+                height: 700px;
+                border: none;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+
+            .social-icons img {
+                width: 32px;
+                height: 32px;
+            }
+
+            .footer-logo {
+                margin-left: 0;
+            }
 
 
-        
+
+        }
     </style>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -468,9 +505,7 @@
                     <img src="./assets/phone.png">
                     <span>0176 54564534</span>
                 </a>
-
         </div>
-
         </nav>
 
         </div>
