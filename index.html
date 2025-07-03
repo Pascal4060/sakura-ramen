@@ -44,7 +44,7 @@
         .logo-container {
             display: flex;
             align-items: center;
-            margin-left: 230px;
+            padding-left: 20px;
         }
 
         .logo {
@@ -123,8 +123,11 @@
         .order-steps {
             display: flex;
             justify-content: center;
-            gap: 250px;
+            gap: 150px;
+            flex-wrap: nowrap;
+            padding: 40px 20px;
         }
+
 
         .step {
             display: flex;
@@ -280,8 +283,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 0 30px;
-            gap: 730px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
         }
+
 
 
         .social-icons {
@@ -402,9 +408,10 @@
             }
 
             .order-steps {
-                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
                 justify-content: center;
-                gap: 170px;
+                gap: 80px;
             }
 
             .step {
@@ -496,9 +503,12 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                padding: 0 30px;
-                gap: 290px;
+                padding: 0 20px;
+                width: 100%;
+                max-width: 100%;
+                box-sizing: border-box;
             }
+
 
             .social-icons {
                 justify-content: center;
@@ -665,11 +675,16 @@
                 }
 
                 .footer-content {
-                    justify-content: space-between;
+                    display: flex;
                     align-items: center;
-                    gap: 200px;
+                    justify-content: center;
+                    gap: 16px;
                     padding: 20px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    text-align: center;
                 }
+
             }
 
 
