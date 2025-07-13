@@ -334,6 +334,7 @@
         }
 
         @media (max-width: 1090px) {
+
             .menu-item,
             .menu-item.reverse {
                 display: flex;
@@ -607,6 +608,42 @@
                 height: 24px;
             }
 
+            @media (max-width: 560px) {
+
+                .menu-item,
+                .menu-item.reverse {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 16px;
+                    padding: 32px 0;
+                }
+
+                .menu-item.reverse {
+                    flex-direction: column-reverse;
+                    align-items: center;
+                    text-align: center;
+                }
+
+
+                .ramen-image {
+                    width: 300px;
+                    height: 300px;
+                }
+
+                .menu-text h3 {
+                    font-size: 32px;
+                }
+
+                .ingredients {
+                    font-size: 24px;
+                }
+
+                .ingredient-row {
+                    font-size: 24px;
+                }
+            }
+
             @media (max-width: 425px) {
 
                 html,
@@ -621,11 +658,24 @@
                 }
 
                 .phone-box {
-                    font-size: 5px;
-                    height: 5px;
-                    padding: 0;
-                    gap: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #9F0908;
+                    color: white;
+                    font-size: 12px;
+                    font-weight: 700;
+                    padding: 4px 8px;
+                    gap: 4px;
+                    border: 2px solid white;
+                    border-radius: 6px;
+                    max-width: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-family: "Raleway", sans-serif;
                 }
+
 
                 .phone-box img {
                     width: 20px;
